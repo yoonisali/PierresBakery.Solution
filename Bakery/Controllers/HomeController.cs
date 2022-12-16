@@ -3,7 +3,7 @@ using Bakery.Models;
 
 namespace Bakery.Controllers 
 {
-  public class HomeController : Controllers
+  public class HomeController : Controller
   {
     [HttpGet("/")]
     public ActionResult Index()

@@ -32,7 +32,26 @@ namespace Bakery.Tests
       Assert.AreEqual(nameOfVendor, name);
     }
 
-    
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      //Arrange
+      string name = "Bob's Bakery";
+      string location = "Texas";
+      string name2 = "Larry's Bakery";
+      string location2 = "Alaska";
+      Vendor newVendor = new Vendor(name, location);
+      Vendor newVendor2 = new Vendor(name2, location2);
+      List<Vendor> newList = new List<Vendor> { newVendor, newVendor2 };
+
+      //Act
+      List<Vendor> result = Vendor.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+
 
   }
 }

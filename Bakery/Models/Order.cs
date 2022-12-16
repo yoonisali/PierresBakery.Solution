@@ -20,6 +20,11 @@ namespace Bakery.Models
       Id = _orderList.Count;
     }
 
+    public static List<Order> GetAll()
+    {
+      return _orderList;
+    }
+
     public static void ClearAll()
     {
       _orderList.Clear();
