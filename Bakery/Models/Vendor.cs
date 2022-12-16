@@ -35,5 +35,10 @@ namespace Bakery.Models
       return _vendorList[searchId-1];
     }
 
+    public void AddOrder(Order order)
+    {
+      orderList.Add(order);
+    }
+
   }
 }
