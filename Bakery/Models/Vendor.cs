@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Bakery.Models
 {
   public class Vendor
@@ -26,6 +28,11 @@ namespace Bakery.Models
     public static void ClearAll()
     {
       _vendorList.Clear();
+    }
+
+    public static Vendor Find(int searchId)
+    {
+      return _vendorList[searchId-1];
     }
 
   }
