@@ -3,18 +3,20 @@
 }
     <h1>Add a new order to @Model.Name</h1>
 
-    <form action="/vendors/@Model.Id/orders" method="post">
-      <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
-      <label for="item">Order Description</label>
-      <input id="item" name="item" type="text"><br>
-      <label for="amount">Order Amount</label>
-      <input id="amount" name="amount" type="text"><br>
-      <label for="price">Order Price</label>
-      <input id="price" name="price" type="text"><br>
-      <label for="date">Order Date</label>
-      <input id="date" name="date" type="text"><br>
-      <button type='submit'>Add Item</button>
-    </form>
+    <form action="/vendors/@Model.Id/orders" method="post" style="text-align: center;">
+    
+      <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id"><br>
 
-<p><a href="/">Back home</a></p>
-<p><a href="/vendors">Back to vendors list</a></p>
+      <input id="item" name="item" placeholder="Order Description" style="text-align: center;" type="text"><br><br>
+
+      <input id="amount" name="amount" placeholder="Order Amount" style="text-align: center;" type="text"><br><br>
+
+      <input id="price" name="price" placeholder="Order Price" style="text-align: center;" type="text"><br><br>
+
+      <input id="date" name="date" placeholder="Order Description" style="text-align: center;" type="text"><br><br>
+
+      <button style="border-radius: 7px;" type='submit'>Add Item</button>
+    </form><br>
+
+<p style="text-align: center;"><a href="/">Back home</a></p>
+<p style="text-align: center;"><a href="/vendors">Back to vendors list</a></p>

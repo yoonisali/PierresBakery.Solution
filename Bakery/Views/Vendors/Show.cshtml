@@ -3,20 +3,20 @@
 }
 @using Bakery.Models;
 
-<h3>Here are all the orders from this vendor:</h3>
+<h3 style="text-align: center;">Here are all the orders from this vendor:</h3>
 
 @if (@Model["orders"].Count == 0)
 {
-  <h3>No orders have been added yet!</h3>
+  <h5 style="text-align: center;">No orders have been added yet!</h5>
 }
 
 <ol>
   @foreach (Order order in @Model["orders"])
   {
-    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Item</a></li>
+    <li style="text-align: center; list-style-position: inside;"><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Item</a></li>
   }
 </ol>
 
-<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
-<p><a href='/vendors'>Return to vendors list</a></p>
-<p><a href='/'>Return to Home Page</a></p>
+<p style="text-align: center;"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
+<p style="text-align: center;"><a href='/vendors'>Return to vendors list</a></p>
+<p style="text-align: center;"><a href='/'>Return to Home Page</a></p>

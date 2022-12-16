@@ -4,10 +4,10 @@
 <h1>Order Details: </h1>
 
 <h3>Vendor: @Model["vendor"].Name</h3>
-<h2>@Model["order"].Item</h2>
-<h2>@Model["order"].Amount</h2>
-<h2>@Model["order"].Price</h2>
-<h2>@Model["order"].Date</h2>
+<p><u>@Model["order"].Item</u></p>
+<p><u>@Model["order"].Amount</u></p>
+<p><u>@Model["order"].Price</u></p>
+<p><u>@Model["order"].Date</u></p>
 
 
 <form action='/vendors/@Model["vendor"].Id/orders/@Model["order"].Id' method="post">
