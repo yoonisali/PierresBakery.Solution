@@ -10,7 +10,7 @@ namespace Bakery.Models
     public string Amount { get; set; }
     public string Price { get; set; }
     public string Date { get; set; }
-    public int Id { get; }
+    public int Id { get; set; }
 
     public Order(string item, string amount, string price, string date)
     {
@@ -30,6 +30,20 @@ namespace Bakery.Models
     public static void ClearAll()
     {
       _orderList.Clear();
+    }
+
+    public static Order Find(int searchId)
+    {
+      return _orderList[searchId-1];
+    }
+
+    public static void Delete(int searchId)
+    {
+      _orderList.RemoveAt(searchId - 1);
+      for (int index = searchId - 1; index < _orderList.Count; index++)
+      {
+        _orderList[index].Id -= 1;
+      }
     }
   }
 }

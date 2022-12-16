@@ -40,5 +40,10 @@ namespace Bakery.Models
       orderList.Add(order);
     }
 
+     public static void DeleteOrder(int vendorId, int orderId)
+    {
+      _vendorList[vendorId - 1].orderList.RemoveAt(orderId - 1);
+    }
+
   }
 }
