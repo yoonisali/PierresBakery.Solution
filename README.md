@@ -18,7 +18,7 @@ _This is an application that allows Pierre to keep track of vendors and their or
 
 ## Setup/Installation Requirements
 
-* _Clone the repository to your desktop from: {Enter the repository url here}_
+* _Clone the repository to your desktop_
 * _Run `[$ dotnet run]` in the Bakery folder._
 
 ## Known Bugs
